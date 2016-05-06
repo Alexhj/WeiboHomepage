@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  HomePageViewController.h
 //  微博个人主页
 //
 //  Created by zenglun on 16/5/4.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface HomePageViewController : UIViewController
 
 @end
-

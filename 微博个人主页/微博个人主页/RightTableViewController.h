@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  RightTableViewController.h
 //  微博个人主页
 //
 //  Created by zenglun on 16/5/4.
@@ -7,11 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseTableViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface RightTableViewController : BaseTableViewController
 
 @end
-
