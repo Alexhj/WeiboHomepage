@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		026105451CDD41A300D00954 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 026105441CDD41A300D00954 /* main.m */; };
+		026105481CDD41A300D00954 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 026105471CDD41A300D00954 /* AppDelegate.m */; };
+		0261054B1CDD41A300D00954 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0261054A1CDD41A300D00954 /* ViewController.m */; };
+		0261054E1CDD41A300D00954 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0261054C1CDD41A300D00954 /* Main.storyboard */; };
+		026105501CDD41A300D00954 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0261054F1CDD41A300D00954 /* Assets.xcassets */; };
+		026105531CDD41A300D00954 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 026105511CDD41A300D00954 /* LaunchScreen.storyboard */; };
+		0261055E1CDD41A300D00954 /* ______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0261055D1CDD41A300D00954 /* ______Tests.m */; };
+		026105691CDD41A300D00954 /* ______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 026105681CDD41A300D00954 /* ______UITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0261055A1CDD41A300D00954 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 026105381CDD41A300D00954 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0261053F1CDD41A300D00954;
+			remoteInfo = "微博个人主页";
+		};
+		026105651CDD41A300D00954 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 026105381CDD41A300D00954 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0261053F1CDD41A300D00954;
+			remoteInfo = "微博个人主页";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		026105401CDD41A300D00954 /* 微博个人主页.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博个人主页.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		026105441CDD41A300D00954 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		026105461CDD41A300D00954 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		026105471CDD41A300D00954 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		026105491CDD41A300D00954 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0261054A1CDD41A300D00954 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0261054D1CDD41A300D00954 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0261054F1CDD41A300D00954 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		026105521CDD41A300D00954 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		026105541CDD41A300D00954 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		026105591CDD41A300D00954 /* 微博个人主页Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "微博个人主页Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0261055D1CDD41A300D00954 /* ______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______Tests.m"; sourceTree = "<group>"; };
+		0261055F1CDD41A300D00954 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		026105641CDD41A300D00954 /* 微博个人主页UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "微博个人主页UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		026105681CDD41A300D00954 /* ______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______UITests.m"; sourceTree = "<group>"; };
+		0261056A1CDD41A300D00954 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0261053D1CDD41A300D00954 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		026105561CDD41A300D00954 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		026105611CDD41A300D00954 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		026105371CDD41A300D00954 = {
+			isa = PBXGroup;
+			children = (
+				026105421CDD41A300D00954 /* 微博个人主页 */,
+				0261055C1CDD41A300D00954 /* 微博个人主页Tests */,
+				026105671CDD41A300D00954 /* 微博个人主页UITests */,
+				026105411CDD41A300D00954 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		026105411CDD41A300D00954 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				026105401CDD41A300D00954 /* 微博个人主页.app */,
+				026105591CDD41A300D00954 /* 微博个人主页Tests.xctest */,
+				026105641CDD41A300D00954 /* 微博个人主页UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		026105421CDD41A300D00954 /* 微博个人主页 */ = {
+			isa = PBXGroup;
+			children = (
+				026105461CDD41A300D00954 /* AppDelegate.h */,
+				026105471CDD41A300D00954 /* AppDelegate.m */,
+				026105491CDD41A300D00954 /* ViewController.h */,
+				0261054A1CDD41A300D00954 /* ViewController.m */,
+				0261054C1CDD41A300D00954 /* Main.storyboard */,
+				0261054F1CDD41A300D00954 /* Assets.xcassets */,
+				026105511CDD41A300D00954 /* LaunchScreen.storyboard */,
+				026105541CDD41A300D00954 /* Info.plist */,
+				026105431CDD41A300D00954 /* Supporting Files */,
+			);
+			path = "微博个人主页";
+			sourceTree = "<group>";
+		};
+		026105431CDD41A300D00954 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				026105441CDD41A300D00954 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0261055C1CDD41A300D00954 /* 微博个人主页Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0261055D1CDD41A300D00954 /* ______Tests.m */,
+				0261055F1CDD41A300D00954 /* Info.plist */,
+			);
+			path = "微博个人主页Tests";
+			sourceTree = "<group>";
+		};
+		026105671CDD41A300D00954 /* 微博个人主页UITests */ = {
+			isa = PBXGroup;
+			children = (
+				026105681CDD41A300D00954 /* ______UITests.m */,
+				0261056A1CDD41A300D00954 /* Info.plist */,
+			);
+			path = "微博个人主页UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0261053F1CDD41A300D00954 /* 微博个人主页 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0261056D1CDD41A300D00954 /* Build configuration list for PBXNativeTarget "微博个人主页" */;
+			buildPhases = (
+				0261053C1CDD41A300D00954 /* Sources */,
+				0261053D1CDD41A300D00954 /* Frameworks */,
+				0261053E1CDD41A300D00954 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "微博个人主页";
+			productName = "微博个人主页";
+			productReference = 026105401CDD41A300D00954 /* 微博个人主页.app */;
+			productType = "com.apple.product-type.application";
+		};
+		026105581CDD41A300D00954 /* 微博个人主页Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 026105701CDD41A300D00954 /* Build configuration list for PBXNativeTarget "微博个人主页Tests" */;
+			buildPhases = (
+				026105551CDD41A300D00954 /* Sources */,
+				026105561CDD41A300D00954 /* Frameworks */,
+				026105571CDD41A300D00954 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0261055B1CDD41A300D00954 /* PBXTargetDependency */,
+			);
+			name = "微博个人主页Tests";
+			productName = "微博个人主页Tests";
+			productReference = 026105591CDD41A300D00954 /* 微博个人主页Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		026105631CDD41A300D00954 /* 微博个人主页UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 026105731CDD41A300D00954 /* Build configuration list for PBXNativeTarget "微博个人主页UITests" */;
+			buildPhases = (
+				026105601CDD41A300D00954 /* Sources */,
+				026105611CDD41A300D00954 /* Frameworks */,
+				026105621CDD41A300D00954 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				026105661CDD41A300D00954 /* PBXTargetDependency */,
+			);
+			name = "微博个人主页UITests";
+			productName = "微博个人主页UITests";
+			productReference = 026105641CDD41A300D00954 /* 微博个人主页UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		026105381CDD41A300D00954 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = ZL;
+				TargetAttributes = {
+					0261053F1CDD41A300D00954 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 4BQNMTTGML;
+					};
+					026105581CDD41A300D00954 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 4BQNMTTGML;
+						TestTargetID = 0261053F1CDD41A300D00954;
+					};
+					026105631CDD41A300D00954 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 4BQNMTTGML;
+						TestTargetID = 0261053F1CDD41A300D00954;
+					};
+				};
+			};
+			buildConfigurationList = 0261053B1CDD41A300D00954 /* Build configuration list for PBXProject "微博个人主页" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 026105371CDD41A300D00954;
+			productRefGroup = 026105411CDD41A300D00954 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0261053F1CDD41A300D00954 /* 微博个人主页 */,
+				026105581CDD41A300D00954 /* 微博个人主页Tests */,
+				026105631CDD41A300D00954 /* 微博个人主页UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0261053E1CDD41A300D00954 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				026105531CDD41A300D00954 /* LaunchScreen.storyboard in Resources */,
+				026105501CDD41A300D00954 /* Assets.xcassets in Resources */,
+				0261054E1CDD41A300D00954 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		026105571CDD41A300D00954 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		026105621CDD41A300D00954 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0261053C1CDD41A300D00954 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0261054B1CDD41A300D00954 /* ViewController.m in Sources */,
+				026105481CDD41A300D00954 /* AppDelegate.m in Sources */,
+				026105451CDD41A300D00954 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		026105551CDD41A300D00954 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0261055E1CDD41A300D00954 /* ______Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		026105601CDD41A300D00954 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				026105691CDD41A300D00954 /* ______UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0261055B1CDD41A300D00954 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0261053F1CDD41A300D00954 /* 微博个人主页 */;
+			targetProxy = 0261055A1CDD41A300D00954 /* PBXContainerItemProxy */;
+		};
+		026105661CDD41A300D00954 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0261053F1CDD41A300D00954 /* 微博个人主页 */;
+			targetProxy = 026105651CDD41A300D00954 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0261054C1CDD41A300D00954 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0261054D1CDD41A300D00954 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		026105511CDD41A300D00954 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				026105521CDD41A300D00954 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0261056B1CDD41A300D00954 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0261056C1CDD41A300D00954 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0261056E1CDD41A300D00954 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "微博个人主页/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0261056F1CDD41A300D00954 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "微博个人主页/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		026105711CDD41A300D00954 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "微博个人主页Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/微博个人主页.app/微博个人主页";
+			};
+			name = Debug;
+		};
+		026105721CDD41A300D00954 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "微博个人主页Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/微博个人主页.app/微博个人主页";
+			};
+			name = Release;
+		};
+		026105741CDD41A300D00954 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "微博个人主页UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "微博个人主页";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		026105751CDD41A300D00954 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "微博个人主页UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "微博个人主页";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0261053B1CDD41A300D00954 /* Build configuration list for PBXProject "微博个人主页" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0261056B1CDD41A300D00954 /* Debug */,
+				0261056C1CDD41A300D00954 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0261056D1CDD41A300D00954 /* Build configuration list for PBXNativeTarget "微博个人主页" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0261056E1CDD41A300D00954 /* Debug */,
+				0261056F1CDD41A300D00954 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		026105701CDD41A300D00954 /* Build configuration list for PBXNativeTarget "微博个人主页Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				026105711CDD41A300D00954 /* Debug */,
+				026105721CDD41A300D00954 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		026105731CDD41A300D00954 /* Build configuration list for PBXNativeTarget "微博个人主页UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				026105741CDD41A300D00954 /* Debug */,
+				026105751CDD41A300D00954 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 026105381CDD41A300D00954 /* Project object */;
+}
