@@ -10,7 +10,7 @@
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScrrenHeight [UIScreen mainScreen].bounds.size.height
-#define headerImgHeight 200 // 头部图片
+#define headerImgHeight 200 // 头部图片刚开始显示的高度（实际高度并不是200）
 #define topBarHeight 64  // 导航栏加状态栏高度
 
 @protocol TableViewScrollingProtocol <NSObject>
