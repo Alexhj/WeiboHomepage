@@ -72,7 +72,6 @@
 		75209E9B1CD9E82200B5A7C0 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
 		75209E9E1CD9EAA500B5A7C0 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
 		75209E9F1CD9EAA500B5A7C0 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
-		75209EA11CD9FAD800B5A7C0 /* TableViewScrollingProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewScrollingProtocol.h; sourceTree = "<group>"; };
 		75209EA21CD9FED400B5A7C0 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTableViewController.h; path = HMSegmentedControl/BaseTableViewController.h; sourceTree = "<group>"; };
 		75209EA31CD9FED400B5A7C0 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTableViewController.m; path = HMSegmentedControl/BaseTableViewController.m; sourceTree = "<group>"; };
 		75C23F2C1CDAEAD500C84E51 /* CommualHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommualHeaderView.xib; sourceTree = "<group>"; };
@@ -144,7 +143,6 @@
 				75209E931CD9C96600B5A7C0 /* MiddleTableViewController.m */,
 				75209E951CD9C97500B5A7C0 /* RightTableViewController.h */,
 				75209E961CD9C97500B5A7C0 /* RightTableViewController.m */,
-				75209EA11CD9FAD800B5A7C0 /* TableViewScrollingProtocol.h */,
 				75209E651CD9C80600B5A7C0 /* Assets.xcassets */,
 				75209E6A1CD9C80600B5A7C0 /* Info.plist */,
 				75209E8C1CD9C8ED00B5A7C0 /* Other */,

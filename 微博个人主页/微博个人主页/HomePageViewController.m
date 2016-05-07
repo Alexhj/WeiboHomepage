@@ -11,7 +11,6 @@
 #import "LeftTableViewController.h"
 #import "MiddleTableViewController.h"
 #import "RightTableViewController.h"
-#import "TableViewScrollingProtocol.h"
 #import "HMSegmentedControl.h"
 #import "ColorUtility.h"
 
