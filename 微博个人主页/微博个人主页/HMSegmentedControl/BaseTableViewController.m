@@ -19,6 +19,10 @@
     CommualHeaderView *headerView = [[[NSBundle mainBundle] loadNibNamed:@"CommualHeaderView" owner:nil options:nil] lastObject];
     headerView.label.text = @"我帮你打水";
     self.tableView.tableHeaderView = headerView;
+    
+    if (self.tableView.contentSize.height < kScrrenHeight) {
+        self.tableView.contentInset = UIEdgeInsetsMake(0, 0, kScrrenHeight + headerImgHeight - topBarHeight - self.tableView.contentSize.height, 0);
+    }
 }
 
 #pragma mark - ScrollView Delegate

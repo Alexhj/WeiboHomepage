@@ -14,12 +14,6 @@
 #import "HMSegmentedControl.h"
 #import "ColorUtility.h"
 
-
-#define kScreenWidth [UIScreen mainScreen].bounds.size.width 
-#define kScrrenHeight [UIScreen mainScreen].bounds.size.height
-#define headerImgHeight 200 // 头部图片
-#define topBarHeight 64  // 导航栏加状态栏高度
-
 @interface HomePageViewController () <TableViewScrollingProtocol>
 
 @property (nonatomic, weak) UIView *navView;
