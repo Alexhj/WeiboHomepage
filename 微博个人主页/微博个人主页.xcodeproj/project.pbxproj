@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02230DA81CDEA5F800EDF7FA /* 123.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02230DA71CDEA5F800EDF7FA /* 123.jpg */; };
+		025466911CDFF2AC00C947D3 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025466901CDFF2AC00C947D3 /* NavigationController.m */; };
 		75209E5B1CD9C80600B5A7C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75209E5A1CD9C80600B5A7C0 /* main.m */; };
 		75209E5E1CD9C80600B5A7C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75209E5D1CD9C80600B5A7C0 /* AppDelegate.m */; };
 		75209E611CD9C80600B5A7C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75209E601CD9C80600B5A7C0 /* ViewController.m */; };
@@ -46,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		02230DA71CDEA5F800EDF7FA /* 123.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 123.jpg; sourceTree = "<group>"; };
+		0254668F1CDFF2AC00C947D3 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		025466901CDFF2AC00C947D3 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		75209E561CD9C80600B5A7C0 /* 微博个人主页.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博个人主页.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75209E5A1CD9C80600B5A7C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75209E5C1CD9C80600B5A7C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 				75209E931CD9C96600B5A7C0 /* MiddleTableViewController.m */,
 				75209E951CD9C97500B5A7C0 /* RightTableViewController.h */,
 				75209E961CD9C97500B5A7C0 /* RightTableViewController.m */,
+				0254668F1CDFF2AC00C947D3 /* NavigationController.h */,
+				025466901CDFF2AC00C947D3 /* NavigationController.m */,
 				75209E651CD9C80600B5A7C0 /* Assets.xcassets */,
 				75209E6A1CD9C80600B5A7C0 /* Info.plist */,
 				75209E8C1CD9C8ED00B5A7C0 /* Other */,
@@ -353,6 +358,7 @@
 				75209E971CD9C97500B5A7C0 /* RightTableViewController.m in Sources */,
 				75209E911CD9C95100B5A7C0 /* LeftTableViewController.m in Sources */,
 				75209E9C1CD9E82200B5A7C0 /* HomePageViewController.m in Sources */,
+				025466911CDFF2AC00C947D3 /* NavigationController.m in Sources */,
 				75209E941CD9C96600B5A7C0 /* MiddleTableViewController.m in Sources */,
 				75209E5B1CD9C80600B5A7C0 /* main.m in Sources */,
 			);
@@ -500,7 +506,7 @@
 				INFOPLIST_FILE = "微博个人主页/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.WeiboHomepage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zlchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -515,7 +521,7 @@
 				INFOPLIST_FILE = "微博个人主页/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.WeiboHomepage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zlchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

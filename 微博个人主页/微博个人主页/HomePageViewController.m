@@ -14,7 +14,9 @@
 #import "HMSegmentedControl.h"
 #import "ColorUtility.h"
 
-@interface HomePageViewController () <TableViewScrollingProtocol>
+@interface HomePageViewController () <TableViewScrollingProtocol> {
+    BOOL _stausBarColorIsBlack;
+}
 
 @property (nonatomic, weak) UIView *navView;
 @property (nonatomic, strong) HMSegmentedControl *segCtrl;
@@ -51,6 +53,11 @@
     self.navigationController.navigationBar.shadowImage = nil;
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return _stausBarColorIsBlack ? UIStatusBarStyleDefault : UIStatusBarStyleLightContent;
+}
+
 #pragma mark - BaseTabelView Delegate
 - (void)tableViewScroll:(UITableView *)tableView offsetY:(CGFloat)offsetY{
     if (offsetY > headerImgHeight - topBarHeight) {
@@ -73,10 +80,14 @@
         CGFloat alpha = (offsetY-36)/100;
         self.navView.alpha = alpha;
         
-        if (alpha > 0.5) {
+        if (alpha > 0.5 && !_stausBarColorIsBlack) {
             self.navigationController.navigationBar.tintColor = [UIColor blackColor];
-        } else {
+            _stausBarColorIsBlack = YES;
+            [self setNeedsStatusBarAppearanceUpdate];
+        } else if (alpha <= 0.5 && _stausBarColorIsBlack) {
             self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+            _stausBarColorIsBlack = NO;
+            [self setNeedsStatusBarAppearanceUpdate];
         }
     }
 }

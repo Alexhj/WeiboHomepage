@@ -8,7 +8,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Bac-Pu-bSS">
             <objects>
-                <navigationController id="T12-ez-9Ux" sceneMemberID="viewController">
+                <navigationController id="T12-ez-9Ux" customClass="NavigationController" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yPN-N7-GSA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
