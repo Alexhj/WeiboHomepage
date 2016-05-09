@@ -126,12 +126,10 @@
             }
         }];
     } else {
-        if (offsetY < headerImgHeight - topBarHeight) {
+        if (offsetY <= headerImgHeight - topBarHeight) {
             [self.offsetYDict enumerateKeysAndObjectsUsingBlock:^(NSString  *key, id  _Nonnull obj, BOOL * _Nonnull stop) {
                 _offsetYDict[key] = @(offsetY);
             }];
-        } else if (offsetY == headerImgHeight - topBarHeight) {
-            _offsetYDict[addressStr] = @(offsetY);
         }
     }
 }
@@ -187,6 +185,8 @@
     segCtrl.selectedTitleTextAttributes = @{NSForegroundColorAttributeName : [ColorUtility colorWithHexString:@"fea41a"]};
     segCtrl.selectionIndicatorColor = [ColorUtility colorWithHexString:@"fea41a"];
     segCtrl.selectedSegmentIndex = 0;
+    segCtrl.borderType = HMSegmentedControlBorderTypeBottom;
+    segCtrl.borderColor = [UIColor lightGrayColor];
     
     [segCtrl addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
 }
