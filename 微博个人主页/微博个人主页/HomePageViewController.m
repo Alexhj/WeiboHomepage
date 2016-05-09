@@ -95,7 +95,7 @@
 - (void)tableViewDidEndDragging:(UITableView *)tableView offsetY:(CGFloat)offsetY {
     _segCtrl.userInteractionEnabled = YES;
     
-    NSString *addressStr = [NSString stringWithFormat:@"%p", tableView];
+    NSString *addressStr = [NSString stringWithFormat:@"%p", _showingVC];
     if (offsetY > headerImgHeight - topBarHeight) {
         [self.offsetYDict enumerateKeysAndObjectsUsingBlock:^(NSString  *key, id  _Nonnull obj, BOOL * _Nonnull stop) {
             if ([key isEqualToString:addressStr]) {
@@ -105,12 +105,10 @@
             }
         }];
     } else {
-        if (offsetY < headerImgHeight - topBarHeight) {
+        if (offsetY <= headerImgHeight - topBarHeight) {
             [self.offsetYDict enumerateKeysAndObjectsUsingBlock:^(NSString  *key, id  _Nonnull obj, BOOL * _Nonnull stop) {
                 _offsetYDict[key] = @(offsetY);
             }];
-        } else if (offsetY == headerImgHeight - topBarHeight) {
-            _offsetYDict[addressStr] = @(offsetY);
         }
     }
 }
@@ -118,7 +116,7 @@
 - (void)tableViewDidEndDecelerating:(UITableView *)tableView offsetY:(CGFloat)offsetY {
     _segCtrl.userInteractionEnabled = YES;
     
-    NSString *addressStr = [NSString stringWithFormat:@"%p", tableView];
+    NSString *addressStr = [NSString stringWithFormat:@"%p", _showingVC];
     if (offsetY > headerImgHeight - topBarHeight) {
         [self.offsetYDict enumerateKeysAndObjectsUsingBlock:^(NSString  *key, id  _Nonnull obj, BOOL * _Nonnull stop) {
             if ([key isEqualToString:addressStr]) {
@@ -154,7 +152,6 @@
     navView.backgroundColor = [UIColor whiteColor];
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 32, kScreenWidth, 20)];
-//    titleLabel.backgroundColor = [UIColor blackColor];
     titleLabel.text = @"我帮你打水";
     titleLabel.font = [UIFont systemFontOfSize:17];
     titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -203,7 +200,7 @@
         newVC.view.frame = self.view.bounds;
     }
     
-    NSString *nextAddressStr = [NSString stringWithFormat:@"%p", newVC.view];
+    NSString *nextAddressStr = [NSString stringWithFormat:@"%p", newVC];
     CGFloat offsetY = [_offsetYDict[nextAddressStr] floatValue];
     newVC.tableView.contentOffset = CGPointMake(0, offsetY);
     
@@ -227,7 +224,7 @@
     if (!_offsetYDict) {
         _offsetYDict = [NSMutableDictionary dictionary];
         for (BaseTableViewController *vc in self.childViewControllers) {
-            NSString *addressStr = [NSString stringWithFormat:@"%p", vc.view];
+            NSString *addressStr = [NSString stringWithFormat:@"%p", vc];
             _offsetYDict[addressStr] = @(CGFLOAT_MIN);
         }
     }

@@ -13,6 +13,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"%@初始化", self);
     
     self.tableView.showsHorizontalScrollIndicator  = NO;
     
@@ -20,9 +21,13 @@
     headerView.label.text = @"我帮你打水";
     self.tableView.tableHeaderView = headerView;
     
-    if (self.tableView.contentSize.height < kScrrenHeight) {
-        self.tableView.contentInset = UIEdgeInsetsMake(0, 0, kScrrenHeight + headerImgHeight - topBarHeight - self.tableView.contentSize.height, 0);
+    if (self.tableView.contentSize.height < kScreenHeight + headerImgHeight - topBarHeight ) {
+        self.tableView.contentInset = UIEdgeInsetsMake(0, 0, kScreenHeight + headerImgHeight - topBarHeight - self.tableView.contentSize.height, 0);
     }
+}
+
+- (void)dealloc {
+    NSLog(@"%@销毁", self);
 }
 
 #pragma mark - ScrollView Delegate
