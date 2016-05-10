@@ -82,7 +82,7 @@
         self.segCtrl.frame = rect;
     }
     
-    if (offsetY > 0) {
+    if (offsetY >= 36) {
         CGFloat alpha = (offsetY-36)/100;
         self.navView.alpha = alpha;
         
@@ -95,6 +95,8 @@
             _stausBarColorIsBlack = NO;
             [self setNeedsStatusBarAppearanceUpdate];
         }
+    } else {
+        self.navView.alpha = 0;
     }
 }
 
