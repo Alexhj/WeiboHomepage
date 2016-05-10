@@ -7,7 +7,6 @@
 //
 
 #import "BaseTableViewController.h"
-#import "CommualHeaderView.h"
 
 @implementation BaseTableViewController
 
@@ -17,8 +16,8 @@
     
     self.tableView.showsHorizontalScrollIndicator  = NO;
     
-    CommualHeaderView *headerView = [[[NSBundle mainBundle] loadNibNamed:@"CommualHeaderView" owner:nil options:nil] lastObject];
-    headerView.label.text = @"我帮你打水";
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, headerImgHeight + switchBarHeight)];
+    headerView.backgroundColor = [UIColor whiteColor];
     self.tableView.tableHeaderView = headerView;
     
     if (self.tableView.contentSize.height < kScreenHeight + headerImgHeight - topBarHeight ) {

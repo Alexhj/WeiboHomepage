@@ -11,6 +11,7 @@
 #import "LeftTableViewController.h"
 #import "MiddleTableViewController.h"
 #import "RightTableViewController.h"
+#import "CommualHeaderView.h"
 #import "HMSegmentedControl.h"
 #import "ColorUtility.h"
 
@@ -183,9 +184,10 @@
 
 - (void)addHeaderView {
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, headerImgHeight + switchBarHeight)];
-    UIView *headerImg = [[[NSBundle mainBundle] loadNibNamed:@"CommualHeaderView" owner:nil options:nil] lastObject];
-    headerImg.frame = CGRectMake(0, 0, kScreenWidth, headerImgHeight);
-    [headerView addSubview:headerImg];
+    CommualHeaderView *headerImgView = [[[NSBundle mainBundle] loadNibNamed:@"CommualHeaderView" owner:nil options:nil] lastObject];
+    headerImgView.frame = CGRectMake(0, 0, kScreenWidth, headerImgHeight);
+    headerImgView.label.text = @"我帮你打水";
+    [headerView addSubview:headerImgView];
     self.headerView = headerView;
     
     HMSegmentedControl *segCtrl = [[HMSegmentedControl alloc] initWithFrame:CGRectMake(0, headerImgHeight, kScreenWidth, switchBarHeight)];
