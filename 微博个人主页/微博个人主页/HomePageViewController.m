@@ -70,6 +70,12 @@
     } else {
         if (![_segCtrl.superview isEqual:tableView]) {
             [tableView addSubview:_segCtrl];
+            for (UIView *view in tableView.subviews) {
+                if ([view isKindOfClass:[UIImageView class]]) {
+                    [tableView insertSubview:_segCtrl belowSubview:view];
+                    break;
+                }
+            }
         }
         CGRect rect = self.segCtrl.frame;
         rect.origin.y = headerImgHeight;
@@ -207,6 +213,12 @@
     [self.view insertSubview:newVC.view belowSubview:self.navView];
     if (offsetY <= headerImgHeight - topBarHeight) { // 如果offsetY大于136的话，此时_segCtrl应该加在主控制器View上
         [newVC.view addSubview:_segCtrl];
+        for (UIView *view in newVC.view.subviews) {
+            if ([view isKindOfClass:[UIImageView class]]) {
+                [newVC.view insertSubview:_segCtrl belowSubview:view];
+                break;
+            }
+        }
         CGRect rect = self.segCtrl.frame;
         rect.origin.y = headerImgHeight;
         self.segCtrl.frame = rect;
