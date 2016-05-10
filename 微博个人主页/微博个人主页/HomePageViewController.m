@@ -20,9 +20,10 @@
 
 @property (nonatomic, weak) UIView *navView;
 @property (nonatomic, strong) HMSegmentedControl *segCtrl;
+@property (nonatomic, strong) UIView *headerView; // 包括_segCtrl和上面装有图片的view
+
 @property (nonatomic, strong) NSArray  *titleList;
 @property (nonatomic, weak) UIViewController *showingVC;
-
 @property (nonatomic, strong) NSMutableDictionary *offsetYDict; // 存储每个tableview在Y轴上的偏移量
 
 @end
@@ -37,7 +38,7 @@
     
     [self configNav];
     [self addController];
-    [self addSegmentedControl];
+    [self addHeaderView];
     [self segmentedControlChangedValue:_segCtrl];
 }
 
@@ -61,26 +62,26 @@
 #pragma mark - BaseTabelView Delegate
 - (void)tableViewScroll:(UITableView *)tableView offsetY:(CGFloat)offsetY{
     if (offsetY > headerImgHeight - topBarHeight) {
-        if (![_segCtrl.superview isEqual:self.view]) {
-            [self.view addSubview:_segCtrl];
+        if (![_headerView.superview isEqual:self.view]) {
+            [self.view insertSubview:_headerView belowSubview:_navView];
         }
-        CGRect rect = self.segCtrl.frame;
-        rect.origin.y = topBarHeight;
-        self.segCtrl.frame = rect;
+        CGRect rect = self.headerView.frame;
+        rect.origin.y = topBarHeight - headerImgHeight;
+        self.headerView.frame = rect;
     } else {
-        if (![_segCtrl.superview isEqual:tableView]) {
-            [tableView addSubview:_segCtrl];
+        if (![_headerView.superview isEqual:tableView]) {
             for (UIView *view in tableView.subviews) {
                 if ([view isKindOfClass:[UIImageView class]]) {
-                    [tableView insertSubview:_segCtrl belowSubview:view];
+                    [tableView insertSubview:_headerView belowSubview:view];
                     break;
                 }
             }
         }
-        CGRect rect = self.segCtrl.frame;
-        rect.origin.y = headerImgHeight;
-        self.segCtrl.frame = rect;
+        CGRect rect = self.headerView.frame;
+        rect.origin.y = 0;
+        self.headerView.frame = rect;
     }
+
     
     if (offsetY >= 36) {
         CGFloat alpha = (offsetY-36)/100;
@@ -180,8 +181,15 @@
     [self addChildViewController:vc3];
 }
 
-- (void)addSegmentedControl {
-    HMSegmentedControl *segCtrl = [[HMSegmentedControl alloc] initWithFrame:CGRectMake(0, headerImgHeight, kScreenWidth, 40)];
+- (void)addHeaderView {
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, headerImgHeight + switchBarHeight)];
+    UIView *headerImg = [[[NSBundle mainBundle] loadNibNamed:@"CommualHeaderView" owner:nil options:nil] lastObject];
+    headerImg.frame = CGRectMake(0, 0, kScreenWidth, headerImgHeight);
+    [headerView addSubview:headerImg];
+    self.headerView = headerView;
+    
+    HMSegmentedControl *segCtrl = [[HMSegmentedControl alloc] initWithFrame:CGRectMake(0, headerImgHeight, kScreenWidth, switchBarHeight)];
+    [headerView addSubview:segCtrl];
     self.segCtrl = segCtrl;
     
     segCtrl.backgroundColor = [ColorUtility colorWithHexString:@"e9e9e9"];
@@ -213,22 +221,22 @@
     newVC.tableView.contentOffset = CGPointMake(0, offsetY);
     
     [self.view insertSubview:newVC.view belowSubview:self.navView];
-    if (offsetY <= headerImgHeight - topBarHeight) { // 如果offsetY大于136的话，此时_segCtrl应该加在主控制器View上
-        [newVC.view addSubview:_segCtrl];
+    if (offsetY <= headerImgHeight - topBarHeight) {
+        [newVC.view addSubview:_headerView];
         for (UIView *view in newVC.view.subviews) {
             if ([view isKindOfClass:[UIImageView class]]) {
-                [newVC.view insertSubview:_segCtrl belowSubview:view];
+                [newVC.view insertSubview:_headerView belowSubview:view];
                 break;
             }
         }
-        CGRect rect = self.segCtrl.frame;
-        rect.origin.y = headerImgHeight;
-        self.segCtrl.frame = rect;
-    } else {
-        [self.view addSubview:_segCtrl];
-        CGRect rect = self.segCtrl.frame;
-        rect.origin.y = topBarHeight;
-        self.segCtrl.frame = rect;
+        CGRect rect = self.headerView.frame;
+        rect.origin.y = 0;
+        self.headerView.frame = rect;
+    } else { // 如果offsetY大于136的话，此时_headerView应该加在主控制器View上
+        [self.view insertSubview:_headerView belowSubview:_navView];
+        CGRect rect = self.headerView.frame;
+        rect.origin.y = topBarHeight - headerImgHeight;
+        self.headerView.frame = rect;
     }
     _showingVC = newVC;
 }
