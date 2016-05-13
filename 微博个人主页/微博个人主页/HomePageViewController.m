@@ -62,6 +62,8 @@
 
 #pragma mark - BaseTabelView Delegate
 - (void)tableViewScroll:(UITableView *)tableView offsetY:(CGFloat)offsetY{
+//    NSLog(@"%f", offsetY);
+    
     if (offsetY > headerImgHeight - topBarHeight) {
         if (![_headerView.superview isEqual:self.view]) {
             [self.view insertSubview:_headerView belowSubview:_navView];
@@ -84,21 +86,26 @@
     }
 
     
-    if (offsetY >= 36) {
-        CGFloat alpha = (offsetY-36)/100;
+    if (offsetY>0) {
+//        NSLog(@"-----------%f", offsetY);
+
+        CGFloat alpha = offsetY/136;
         self.navView.alpha = alpha;
         
-        if (alpha > 0.5 && !_stausBarColorIsBlack) {
+        if (alpha > 0.6 && !_stausBarColorIsBlack) {
             self.navigationController.navigationBar.tintColor = [UIColor blackColor];
             _stausBarColorIsBlack = YES;
             [self setNeedsStatusBarAppearanceUpdate];
-        } else if (alpha <= 0.5 && _stausBarColorIsBlack) {
+        } else if (alpha <= 0.6 && _stausBarColorIsBlack) {
             self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
             _stausBarColorIsBlack = NO;
             [self setNeedsStatusBarAppearanceUpdate];
         }
     } else {
         self.navView.alpha = 0;
+        self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+        _stausBarColorIsBlack = NO;
+        [self setNeedsStatusBarAppearanceUpdate];
     }
 }
 
