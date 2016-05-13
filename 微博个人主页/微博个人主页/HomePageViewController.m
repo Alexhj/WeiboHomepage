@@ -234,7 +234,7 @@
         CGRect rect = self.headerView.frame;
         rect.origin.y = 0;
         self.headerView.frame = rect;
-    } else { // 如果offsetY大于136的话，此时_headerView应该加在主控制器View上
+    }  else {
         [self.view insertSubview:_headerView belowSubview:_navView];
         CGRect rect = self.headerView.frame;
         rect.origin.y = topBarHeight - headerImgHeight;
