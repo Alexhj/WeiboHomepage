@@ -61,9 +61,7 @@
 }
 
 #pragma mark - BaseTabelView Delegate
-- (void)tableViewScroll:(UITableView *)tableView offsetY:(CGFloat)offsetY{
-//    NSLog(@"%f", offsetY);
-    
+- (void)tableViewScroll:(UITableView *)tableView offsetY:(CGFloat)offsetY{    
     if (offsetY > headerImgHeight - topBarHeight) {
         if (![_headerView.superview isEqual:self.view]) {
             [self.view insertSubview:_headerView belowSubview:_navView];
