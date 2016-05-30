@@ -17,17 +17,15 @@
 @protocol TableViewScrollingProtocol <NSObject>
 
 @required
-// 返回tableView在Y轴上的偏移量
 - (void)tableViewScroll:(UITableView *)tableView offsetY:(CGFloat)offsetY;
-
-- (void)tableViewWillBeginDecelerating:(UITableView *)tableView offsetY:(CGFloat)offsetY;
 
 - (void)tableViewDidEndDecelerating:(UITableView *)tableView offsetY:(CGFloat)offsetY;
 
-@optional
+- (void)tableViewDidEndDragging:(UITableView *)tableView offsetY:(CGFloat)offsetY;
+
 - (void)tableViewWillBeginDragging:(UITableView *)tableView offsetY:(CGFloat)offsetY;
 
-- (void)tableViewDidEndDragging:(UITableView *)tableView offsetY:(CGFloat)offsetY;
+- (void)tableViewWillBeginDecelerating:(UITableView *)tableView offsetY:(CGFloat)offsetY;
 
 @end
 

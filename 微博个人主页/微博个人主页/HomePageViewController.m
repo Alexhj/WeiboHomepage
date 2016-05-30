@@ -21,7 +21,7 @@
 
 @property (nonatomic, weak) UIView *navView;
 @property (nonatomic, strong) HMSegmentedControl *segCtrl;
-@property (nonatomic, strong) UIView *headerView; // 包括_segCtrl和上面装有图片的view
+@property (nonatomic, strong) CommualHeaderView *headerView;
 
 @property (nonatomic, strong) NSArray  *titleList;
 @property (nonatomic, weak) UIViewController *showingVC;
@@ -62,8 +62,6 @@
 
 #pragma mark - BaseTabelView Delegate
 - (void)tableViewScroll:(UITableView *)tableView offsetY:(CGFloat)offsetY{
-//    NSLog(@"%f", offsetY);
-    
     if (offsetY > headerImgHeight - topBarHeight) {
         if (![_headerView.superview isEqual:self.view]) {
             [self.view insertSubview:_headerView belowSubview:_navView];
@@ -87,8 +85,6 @@
 
     
     if (offsetY>0) {
-//        NSLog(@"-----------%f", offsetY);
-
         CGFloat alpha = offsetY/136;
         self.navView.alpha = alpha;
         
@@ -110,7 +106,7 @@
 }
 
 - (void)tableViewDidEndDragging:(UITableView *)tableView offsetY:(CGFloat)offsetY {
-    _segCtrl.userInteractionEnabled = YES;
+    _headerView.canNotResponseTapTouchEvent = NO;
     
     NSString *addressStr = [NSString stringWithFormat:@"%p", _showingVC];
     if (offsetY > headerImgHeight - topBarHeight) {
@@ -131,7 +127,7 @@
 }
 
 - (void)tableViewDidEndDecelerating:(UITableView *)tableView offsetY:(CGFloat)offsetY {
-    _segCtrl.userInteractionEnabled = YES;
+    _headerView.canNotResponseTapTouchEvent = NO;
     
     NSString *addressStr = [NSString stringWithFormat:@"%p", _showingVC];
     if (offsetY > headerImgHeight - topBarHeight) {
@@ -152,11 +148,11 @@
 }
 
 - (void)tableViewWillBeginDecelerating:(UITableView *)tableView offsetY:(CGFloat)offsetY {
-    _segCtrl.userInteractionEnabled = NO;
+    _headerView.canNotResponseTapTouchEvent = YES;
 }
 
 - (void)tableViewWillBeginDragging:(UITableView *)tableView offsetY:(CGFloat)offsetY {
-    _segCtrl.userInteractionEnabled = NO;
+    _headerView.canNotResponseTapTouchEvent = YES;
 }
 
 #pragma mark - Private
@@ -190,30 +186,25 @@
 }
 
 - (void)addHeaderView {
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, headerImgHeight + switchBarHeight)];
-    CommualHeaderView *headerImgView = [[[NSBundle mainBundle] loadNibNamed:@"CommualHeaderView" owner:nil options:nil] lastObject];
-    headerImgView.frame = CGRectMake(0, 0, kScreenWidth, headerImgHeight);
-    headerImgView.label.text = @"我帮你打水";
-    [headerView addSubview:headerImgView];
+    CommualHeaderView *headerView = [[[NSBundle mainBundle] loadNibNamed:@"CommualHeaderView" owner:nil options:nil] lastObject];
+    headerView.frame = CGRectMake(0, 0, kScreenWidth, headerImgHeight+switchBarHeight);
+    headerView.label.text = @"我帮你打水";
     self.headerView = headerView;
+    self.segCtrl = headerView.segCtrl;
     
-    HMSegmentedControl *segCtrl = [[HMSegmentedControl alloc] initWithFrame:CGRectMake(0, headerImgHeight, kScreenWidth, switchBarHeight)];
-    [headerView addSubview:segCtrl];
-    self.segCtrl = segCtrl;
+    _segCtrl.sectionTitles = _titleList;
+    _segCtrl.backgroundColor = [ColorUtility colorWithHexString:@"e9e9e9"];
+    _segCtrl.selectionIndicatorHeight = 2.0f;
+    _segCtrl.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
+    _segCtrl.selectionStyle = HMSegmentedControlSelectionStyleTextWidthStripe;
+    _segCtrl.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor grayColor], NSFontAttributeName : [UIFont systemFontOfSize:15]};
+    _segCtrl.selectedTitleTextAttributes = @{NSForegroundColorAttributeName : [ColorUtility colorWithHexString:@"fea41a"]};
+    _segCtrl.selectionIndicatorColor = [ColorUtility colorWithHexString:@"fea41a"];
+    _segCtrl.selectedSegmentIndex = 0;
+    _segCtrl.borderType = HMSegmentedControlBorderTypeBottom;
+    _segCtrl.borderColor = [UIColor lightGrayColor];
     
-    segCtrl.backgroundColor = [ColorUtility colorWithHexString:@"e9e9e9"];
-    segCtrl.sectionTitles = _titleList;
-    segCtrl.selectionIndicatorHeight = 2.0f;
-    segCtrl.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
-    segCtrl.selectionStyle = HMSegmentedControlSelectionStyleTextWidthStripe;
-    segCtrl.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor grayColor], NSFontAttributeName : [UIFont systemFontOfSize:15]};
-    segCtrl.selectedTitleTextAttributes = @{NSForegroundColorAttributeName : [ColorUtility colorWithHexString:@"fea41a"]};
-    segCtrl.selectionIndicatorColor = [ColorUtility colorWithHexString:@"fea41a"];
-    segCtrl.selectedSegmentIndex = 0;
-    segCtrl.borderType = HMSegmentedControlBorderTypeBottom;
-    segCtrl.borderColor = [UIColor lightGrayColor];
-    
-    [segCtrl addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
+    [_segCtrl addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)segmentedControlChangedValue:(HMSegmentedControl*)sender {

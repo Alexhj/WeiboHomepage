@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HMSegmentedControl.h"
+@class HMSegmentedControl;
 
 @interface CommualHeaderView : UIView
-@property (weak, nonatomic) IBOutlet UILabel *label;
 
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet HMSegmentedControl *segCtrl;
+
+@property (nonatomic, assign) BOOL canNotResponseTapTouchEvent;
 
 @end
 
