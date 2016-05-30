@@ -106,7 +106,8 @@
 }
 
 - (void)tableViewDidEndDragging:(UITableView *)tableView offsetY:(CGFloat)offsetY {
-    _headerView.canNotResponseTapTouchEvent = NO;
+//    _headerView.canNotResponseTapTouchEvent = NO;  这四行被屏蔽内容，每行下面一行的效果一样
+    _headerView.userInteractionEnabled = YES;
     
     NSString *addressStr = [NSString stringWithFormat:@"%p", _showingVC];
     if (offsetY > headerImgHeight - topBarHeight) {
@@ -127,7 +128,8 @@
 }
 
 - (void)tableViewDidEndDecelerating:(UITableView *)tableView offsetY:(CGFloat)offsetY {
-    _headerView.canNotResponseTapTouchEvent = NO;
+//    _headerView.canNotResponseTapTouchEvent = NO; 这四行被屏蔽内容，每行下面一行的效果一样
+    _headerView.userInteractionEnabled = YES;
     
     NSString *addressStr = [NSString stringWithFormat:@"%p", _showingVC];
     if (offsetY > headerImgHeight - topBarHeight) {
@@ -148,11 +150,13 @@
 }
 
 - (void)tableViewWillBeginDecelerating:(UITableView *)tableView offsetY:(CGFloat)offsetY {
-    _headerView.canNotResponseTapTouchEvent = YES;
+//    _headerView.canNotResponseTapTouchEvent = YES; 这四行被屏蔽内容，每行下面一行的效果一样
+    _headerView.userInteractionEnabled = NO;
 }
 
 - (void)tableViewWillBeginDragging:(UITableView *)tableView offsetY:(CGFloat)offsetY {
-    _headerView.canNotResponseTapTouchEvent = YES;
+//    _headerView.canNotResponseTapTouchEvent = YES; 这四行被屏蔽内容，每行下面一行的效果一样
+    _headerView.userInteractionEnabled = NO;
 }
 
 #pragma mark - Private
