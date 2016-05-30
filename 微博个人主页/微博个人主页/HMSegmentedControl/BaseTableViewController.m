@@ -23,8 +23,6 @@
     if (self.tableView.contentSize.height < kScreenHeight + headerImgHeight - topBarHeight ) {
         self.tableView.contentInset = UIEdgeInsetsMake(0, 0, kScreenHeight + headerImgHeight - topBarHeight - self.tableView.contentSize.height, 0);
     }
-    
-    self.tableView.showsHorizontalScrollIndicator = NO;
 }
 
 - (void)dealloc {
