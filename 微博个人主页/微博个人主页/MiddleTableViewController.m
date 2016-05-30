@@ -37,4 +37,19 @@
     return cell;
 }
 
+- (void)request_data {
+    // 如果需要请求网络数据, 再调用tableView的reloadData之后，调用下面resetContentInset方法可以消除底部多余空白
+}
+
+#pragma mark - Private
+- (void)resetContentInset {
+    [self.tableView layoutIfNeeded];
+    
+    if (self.tableView.contentSize.height < kScreenHeight + 136) {  // 136 = 200
+        self.tableView.contentInset = UIEdgeInsetsMake(0, 0, kScreenHeight+88-self.tableView.contentSize.height, 0);
+    } else {
+        self.tableView.contentInset = UIEdgeInsetsZero;
+    }
+}
+
 @end
